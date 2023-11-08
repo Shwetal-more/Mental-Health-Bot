@@ -23,7 +23,20 @@ def smalltest():
         response=response+ res3
         break
       else:
-        print("Please give answer in correct range")    
+        print("Please give answer in correct range")  
+
+  if (response >=30):
+    BigTest()
+  else:
+    endPart()
+
+#Big test is to identify specific Disorder
+def BigTest():
+  pass
+
+#end part regarding awreness
+def endPart():
+  pass
 
 
 print("***********Welcome to our Student friendly quik and easy Mental Health testing game**************")
@@ -32,6 +45,12 @@ if user.lower() == 'y':
     smalltest()
 elif user.lower() == 'n':
     print("Thank you!!")
+    endPart()
+
+
+
+
+
   
      
 
