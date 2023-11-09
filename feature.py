@@ -3,6 +3,8 @@ import depression
 import EatingDisorder
 import Hyperactivity
 import personalityTest
+import awareness
+
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -15,7 +17,8 @@ class color:
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 def smalltest():
-  questions = ("1. How have you been feeling lately ?",
+  
+    questions = ("1. How have you been feeling lately ?",
              "2. On average, how many hours of sleep do you get per night \U0001F634 ?",
              "3. How have you been eating?",
              "4. Do you feel supported by your friends and peers in managing your mental health as a student \U0001F61E ?",
@@ -27,7 +30,7 @@ def smalltest():
              "10. How would you rate your overall stress levels in your daily life\U0001F64D?",
              "11. Do you feel comfortable expressing your thoughts and emotions to your Friends & Family?\U0001F46A")
 
-  options =(("A. \U0001F604", "B. \U0001F634", "C. \U0001F625", "D. \U0001F912", "E. \U0001F621"),
+    options =(("A. \U0001F604", "B. \U0001F634", "C. \U0001F625", "D. \U0001F912", "E. \U0001F621"),
             ("A.8-9hrs", "B.6-7hrs", "C.3-5hrs", "D.Sleepless night" ),
             ("A.Properly and on Time", "B.occasionally less", "C.frequently, Too Little", "D. frequently, too much", "E. Always Hungry"),
             ("A. Always", "B. most of time", "C. occasionally", "D. No,very rarely", "E. No, not at all"),
@@ -38,10 +41,9 @@ def smalltest():
             ("A. Yes, frequently", "B. Yes, occasionally", "C. No, rarely", "D. No, never"),
             ("A.Very low",  "B.Low Moderate", "C.High", "D. Very high"),
             ("A.Yes, always", "B.Most of the time", "C.Sometimes", "D. Rarely or never"))
-  Guesses = []
-  score = 0
-  Question_number=0
-  while True:
+    Guesses = []
+    score = 0
+    Question_number=0
     for question in questions:
      print(color.PURPLE+"---------------------------------------------------------------------------"+color.END)
      print(question)
@@ -51,10 +53,11 @@ def smalltest():
      
      Guess = input("Enter the Answer (A,B,C,D,E):").upper()
      Guesses.append(Guess)
+    
      if Guess == 'A':
-      score=score+2 
+         score=score+2 
      elif Guess == 'B':
-       score=score+4 
+        score=score+4 
      elif Guess == 'C':
        score=score+6 
      elif Guess == 'D':
@@ -63,13 +66,12 @@ def smalltest():
        score=score+10
      else:
        print("Please give answer in correct range")
-     Question_number+=1
-    break  
-
-  if (score >=30):
-    BigTest()
-  else:
-    endPart()
+     Question_number+=1 
+    
+    if (score >=30):
+      BigTest()
+    else:
+      EndPart()
 
 #Big test is to identify specific Disorder
 def BigTest():
@@ -433,30 +435,15 @@ def BigTest():
         print("Ohh goood , You don't have such a symptoms regarding Hyperactivity Dosorder")  
 
       break    
-
-
-
     
-
-
-
-
     elif test.lower()== 'n':
-      break
-      pass
+       break
 
     
+def EndPart():
+      result = awareness.movie()
+      
 
-   
-
-
-  
-
-
-
-#end part regarding awreness
-def endPart():
-  pass
 
 #Starting of the main code
 print("***********Welcome to our Student friendly quik and easy Mental Health testing game**************")
@@ -464,8 +451,11 @@ user=str(input("Are you interested in giving the small test(y/Y) or not(N/n) ? "
 if user.lower() == 'y':
     smalltest()
 elif user.lower() == 'n':
-    print("Thank you!!")
-    endPart()
+     result = awareness.movie()
+     print("Thank you!!")
+     
+
+   
 
 
 
