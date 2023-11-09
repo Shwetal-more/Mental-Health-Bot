@@ -3,6 +3,7 @@ import anxiety
 import depression
 import EatingDisorder
 import Hyperactivity
+import personalityTest
 
 def smalltest():
   response=0
@@ -40,8 +41,8 @@ def smalltest():
 def BigTest():
   print("Now we are going to have diffferent tests for different aspects in mental health")
   print("Apppearing for anxiety test  (Please answer in (y/n)form ) ")
+  anxious=0
   while True:
-      anxious=0
       res1=str(input("Have you been feeling unusually anxious or worried most days for at least six months?"))
       if res1.lower() == 'y':
         anxious+=1
@@ -102,6 +103,7 @@ def BigTest():
 
 
   print("Apppearing for Depression test (Please answer in (y/n)form )")
+  deprees=0
   while True:
       deprees=0
       res1=str(input("1. Have you been persistently feeling sad or down for most of the day, nearly every day, for at least two weeks or longer?"))
@@ -164,8 +166,8 @@ def BigTest():
 
 
   print("Apppearing for Eating Disorder test (Please answer in (y/n)form )")
+  Eating=0
   while True:
-      Eating=0
       res1=str(input("1. Have you noticed any significant changes in your eating habits, such as eating much less or much more than usual?"))
       if res1.lower() == 'y':
          Eating+=1
@@ -223,78 +225,147 @@ def BigTest():
     print(result)
   else:
     print("Ohh goood , You don't have such a symptoms regarding Eating Dosorder")   
-
-  test=print("Are you inerested to give another tests ? ")
-  if test.lower() == 'y':
-    print("Apppearing for Hyperactivity Disorder test (Please answer in (y/n)form )")
-    while True:
+    
+    
+  while True:
+    test=print("Are you inerested to give another tests  (Please answer in (y/n)form ) ? ")
+    if test.lower() == 'y':
+      print("Apppearing for Hyperactivity Disorder test (Please answer in (y/n)form )")
       hyper=0
-      res1=str(input("1. Have you noticed any significant changes in your eating habits, such as eating much less or much more than usual?"))
-      if res1.lower() == 'y':
-         hyper+=1
-         break
-      elif res1.lower() == 'n':
-        print("Thank you!!")
-        break
-      else:
-        print(" Please enter the correct answer")  
-    while True:
-      res2=str(input("2.Do you often feel a strong need to control your weight or body shape through dieting or excessive exercise?"))
-      if res2.lower() == 'y':
-         hyper+=1
-         break
-      elif res2.lower() == 'n':
-        print("Thank you!!")
-        break
-    while True:
-      res3=str(input("3.Have you experienced any physical or emotional health issues that you suspect might be related to your eating habits?"))
-      if res3.lower() == 'y':
-         hyper+=1
-         break
-      elif res3.lower() == 'n':
-        print("Thank you!!")
-        break
-      else:
-        print(" Please enter the correct answer")    
-    while True:
-      res4=str(input("4.Are you often dissatisfied with your appearance and body image?"))
-      if res4.lower() == 'y':
-         hyper+=1
-         break
-      elif res4.lower() == 'n':
-        print("Thank you!!") 
-        break   
-      else:
-        print(" Please enter the correct answer")     
-    while True:
-      res5=str(input("5. Have you ever made yourself vomit, used laxatives, or engaged in other behaviors to compensate for the amount of food you've eaten? "))
-      if res5.lower() == 'y':
-         hyper+=1
-         break
-      elif res5.lower() == 'n':
-        print("Thank you!!")
-        break
-      else:
-        print(" Please enter the correct answer")
+      while True:
+        res1=str(input("1. Do you often find it challenging to stay focused on tasks or activities that require sustained attention?"))
+        if res1.lower() == 'y':
+           hyper+=1
+           break
+        elif res1.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")  
+      while True:
+        res2=str(input("2. Do you frequently make careless mistakes in school or work?? "))
+        if res2.lower() == 'y':
+           hyper+=1
+           break
+        elif res2.lower() == 'n':
+          print("Thank you!!")
+          break
+      while True:
+        res3=str(input("3. Do you find it difficult to organize tasks and activities?"))
+        if res3.lower() == 'y':
+           hyper+=1
+           break
+        elif res3.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")    
+      while True:
+        res4=str(input("4.Are you often forgetful in your daily routines?"))
+        if res4.lower() == 'y':
+           hyper+=1
+           break
+        elif res4.lower() == 'n':
+          print("Thank you!!") 
+          break   
+        else:
+          print(" Please enter the correct answer")     
+      while True:
+        res5=str(input("5. Do you tend to feel restless or fidgety, such as tapping your hands or feet when you need to sit still? "))
+        if res5.lower() == 'y':
+           hyper+=1
+           break  
+        elif res5.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")
 
-    if ( hyper>=2 and hyper<=3):
-      print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
-      result=Hyperactivity.moderate()
-      print(result)
-    elif( Eating>=4 and  Eating==5):
-      result=Hyperactivity.dangerous() 
-      print(result)
-    else:
-      print("Ohh goood , You don't have such a symptoms regarding Eating Dosorder")   
+      if ( hyper>=2 and hyper<=3):
+        print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
+        result=Hyperactivity.moderate()
+        print(result)
+      elif( hyper>=4 and  hyper==5):
+        result=Hyperactivity.dangerous() 
+        print(result)
+      else:
+        print("Ohh goood , You don't have such a symptoms regarding Hyperactivity Dosorder") 
+
+
+      print(" Appearing for test 5 i.e Personality Disorder test  (Please answer in (y/n)form ) ") 
+      personality=0
+      while True:
+        res1=str(input("1. Do you often find it challenging to stay focused on tasks or activities that require sustained attention?"))
+        if res1.lower() == 'y':
+           personality+=1
+           break
+        elif res1.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")  
+      while True:
+        res2=str(input("2. Do you frequently make careless mistakes in school or work?? "))
+        if res2.lower() == 'y':
+          personality+=1
+          break
+        elif res2.lower() == 'n':
+          print("Thank you!!")
+          break
+      while True:
+        res3=str(input("3. Do you find it difficult to organize tasks and activities?"))
+        if res3.lower() == 'y':
+           personality+=1
+           break
+        elif res3.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")    
+      while True:
+        res4=str(input("4.Are you often forgetful in your daily routines?"))
+        if res4.lower() == 'y':
+           personality+=1
+           break
+        elif res4.lower() == 'n':
+          print("Thank you!!") 
+          break   
+        else:
+          print(" Please enter the correct answer")     
+      while True:
+        res5=str(input("5. Do you tend to feel restless or fidgety, such as tapping your hands or feet when you need to sit still? "))
+        if res5.lower() == 'y':
+           personality+=1
+           break  
+        elif res5.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")
+
+      if (  personality>=2 and  personality<=3):
+        print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
+        result=personalityTest.moderate()
+        print(result)
+      elif(  personality>=4 and   personality==5):
+        result=personalityTest.dangerous() 
+        print(result)
+      else:
+        print("Ohh goood , You don't have such a symptoms regarding Hyperactivity Dosorder")  
+
+
+
     
 
 
-  elif test.lower() == 'n':
-    print("Thank you!!")
-    endPart()
-  else:
-    print("Please give the correct answer")  
 
+
+    elif test.lower()== 'n':
+      pass
+
+    
+
+   
 
 
   
