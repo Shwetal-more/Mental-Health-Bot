@@ -1,6 +1,6 @@
 import os
 
-def greaterThan3andEualTo4():
+def moderate():
     pass
 
 

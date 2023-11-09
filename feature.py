@@ -2,6 +2,7 @@ import os
 import anxiety
 import depression
 import EatingDisorder
+import Hyperactivity
 
 def smalltest():
   response=0
@@ -222,6 +223,79 @@ def BigTest():
     print(result)
   else:
     print("Ohh goood , You don't have such a symptoms regarding Eating Dosorder")   
+
+  test=print("Are you inerested to give another tests ? ")
+  if test.lower() == 'y':
+    print("Apppearing for Hyperactivity Disorder test (Please answer in (y/n)form )")
+    while True:
+      hyper=0
+      res1=str(input("1. Have you noticed any significant changes in your eating habits, such as eating much less or much more than usual?"))
+      if res1.lower() == 'y':
+         hyper+=1
+         break
+      elif res1.lower() == 'n':
+        print("Thank you!!")
+        break
+      else:
+        print(" Please enter the correct answer")  
+    while True:
+      res2=str(input("2.Do you often feel a strong need to control your weight or body shape through dieting or excessive exercise?"))
+      if res2.lower() == 'y':
+         hyper+=1
+         break
+      elif res2.lower() == 'n':
+        print("Thank you!!")
+        break
+    while True:
+      res3=str(input("3.Have you experienced any physical or emotional health issues that you suspect might be related to your eating habits?"))
+      if res3.lower() == 'y':
+         hyper+=1
+         break
+      elif res3.lower() == 'n':
+        print("Thank you!!")
+        break
+      else:
+        print(" Please enter the correct answer")    
+    while True:
+      res4=str(input("4.Are you often dissatisfied with your appearance and body image?"))
+      if res4.lower() == 'y':
+         hyper+=1
+         break
+      elif res4.lower() == 'n':
+        print("Thank you!!") 
+        break   
+      else:
+        print(" Please enter the correct answer")     
+    while True:
+      res5=str(input("5. Have you ever made yourself vomit, used laxatives, or engaged in other behaviors to compensate for the amount of food you've eaten? "))
+      if res5.lower() == 'y':
+         hyper+=1
+         break
+      elif res5.lower() == 'n':
+        print("Thank you!!")
+        break
+      else:
+        print(" Please enter the correct answer")
+
+    if ( hyper>=2 and hyper<=3):
+      print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
+      result=Hyperactivity.moderate()
+      print(result)
+    elif( Eating>=4 and  Eating==5):
+      result=Hyperactivity.dangerous() 
+      print(result)
+    else:
+      print("Ohh goood , You don't have such a symptoms regarding Eating Dosorder")   
+    
+
+
+  elif test.lower() == 'n':
+    print("Thank you!!")
+    endPart()
+  else:
+    print("Please give the correct answer")  
+
+
 
   
 
