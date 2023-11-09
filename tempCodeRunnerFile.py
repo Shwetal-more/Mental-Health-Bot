@@ -23,18 +23,26 @@ def smalltest():
         response=response+ res3
         break
       else:
-        print("Please give answer in correct range")    
+        print("Please give answer in correct range")  
 
+  if (response >=30):
+    BigTest()
+  else:
+    endPart()
 
+#Big test is to identify specific Disorder
+def BigTest():
+  pass
+
+#end part regarding awreness
+def endPart():
+  pass
+
+#Starting of the main code
 print("***********Welcome to our Student friendly quik and easy Mental Health testing game**************")
 user=str(input("Are you interested in giving the small test(y/Y) or not(N/n) ? "))
 if user.lower() == 'y':
     smalltest()
 elif user.lower() == 'n':
     print("Thank you!!")
-  
-     
-
-           
-
-
+    endPart()
