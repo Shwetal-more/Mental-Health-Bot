@@ -315,6 +315,7 @@ def BigTest():
         print(result)
       else:
         print("Ohh goood , You don't have such a symptoms regarding Hyperactivity Dosorder") 
+      
 
 
       print(" Appearing for test 5 i.e Personality Disorder test  (Please answer in (y/n)form ) ") 
@@ -378,6 +379,8 @@ def BigTest():
       else:
         print("Ohh goood , You don't have such a symptoms regarding Hyperactivity Dosorder")  
 
+      break    
+
 
 
     
@@ -386,6 +389,7 @@ def BigTest():
 
 
     elif test.lower()== 'n':
+      break
       pass
 
     
