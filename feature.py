@@ -5,33 +5,59 @@ import Hyperactivity
 import personalityTest
 
 def smalltest():
-  response=0
-  while True:
-     res1=int(input("1. How have you been feeling lately (Rate in range of 0 to 100%)?"))
-     if res1>0 and res1<100:
-      response=response+ res1
-      break
-     else:
-      print("Please give answer in correct range")
+  questions = ("1. How have you been feeling lately ?",
+             "2. On average, how many hours of sleep do you get per night \U0001F634 ?",
+             "3. How have you been eating?",
+             "4. Do you feel supported by your friends and peers in managing your mental health as a student \U0001F61E ?",
+             "5. How will you dcribe your angry control \U0001F621 ?",
+             "6. When was the last time you laugh out loud \U0001F923 ?",
+             "7. How often do you feel overwhelmed by academic responsibilities and deadlines \U0001F616 ?",
+             "8. Have you experienced any symptoms of depression, such as persistent sadness or loss of interest \U0001F64D ?",
+             "9. Do you engage in regular physical activity and maintain a healthy lifestyle\U0001F6B6 \U0001F3C3?",
+             "10. How would you rate your overall stress levels in your daily life\U0001F64D?",
+             "11. Do you feel comfortable expressing your thoughts and emotions to your Friends & Family?\U0001F46A")
 
-  while True:
-    res2=int(input("2. Are there any specific situations or events causing you stress or anxiety(Rate in range of 0 to 100%)?"))
-    if res2>0 and res2<10:
-      response=response+ res2
-      break
+  options =(("A. \U0001F604", "B. \U0001F634", "C. \U0001F625", "D. \U0001F912", "E. \U0001F621"),
+            ("A.8-9hrs", "B.6-7hrs", "C.3-5hrs", "D.Sleepless night" ),
+            ("A.Properly and on Time", "B.occasionally less", "C.frequently, Too Little", "D. frequently, too much", "E. Always Hungry"),
+            ("A. Always", "B. most of time", "C. occasionally", "D. No,very rarely", "E. No, not at all"),
+            ("A. I don't get angry easily", "B. i can control my angry", "C. i get angry easliy", "D. I can't controlled my angry"),
+            ("A. Just sometime earlier", "B. few days earlier", "C. Not in past few days", "D. Been Weeks"),
+            ("A. No, not at all", "B. sometimes","C. easily Overwhelmed", "D. Very easily overwhelmed"),
+            ("A. No, never", "B. No, rarely",  "C. Yes, occasionally", "D. Yes, frequently"),
+            ("A. Yes, frequently", "B. Yes, occasionally", "C. No, rarely", "D. No, never"),
+            ("A.Very low",  "B.Low Moderate", "C.High", "D. Very high"),
+            ("A.Yes, always", "B.Most of the time", "C.Sometimes", "D. Rarely or never"))
+  Guesses = []
+  score = 0
+  Question_number=0
+  
+  for question in questions:
+    print("---------------------------------------------------------------------------")
+    print(question)
+    for option in options[Question_number]:
+        print(option)
+    
+     
+    Guess = input("Enter the Answer (A,B,C,D,E):").upper()
+    Guesses.append(Guess)
+    if Guess == 'A':
+      score=score+2 
+    elif Guess == 'B':
+     score=score+4 
+    elif Guess == 'C':
+     score=score+6 
+    elif Guess == 'D':
+     score=score+8
+    elif Guess == 'E':
+     score=score+10
     else:
-      print("Please give answer in correct range")
+     print("Please give answer in correct range")
+     
+    Question_number+=1
+     
 
-
-  while True:
-      res3=int(input("3. On a scale of 0 to 10 , how would you rate your overall modd today?"))
-      if res3>0 and res3<10:
-        response=response+ res3
-        break
-      else:
-        print("Please give answer in correct range")  
-
-  if (response >=30):
+  if (score >=30):
     BigTest()
   else:
     endPart()
@@ -227,7 +253,7 @@ def BigTest():
     
     
   while True:
-    test=print("Are you inerested to give another tests  (Please answer in (y/n)form ) ? ")
+    test=str(input("Are you inerested to give another tests  (Please answer in (y/n)form ) ? "))
     if test.lower() == 'y':
       print("Apppearing for Hyperactivity Disorder test (Please answer in (y/n)form )")
       hyper=0
