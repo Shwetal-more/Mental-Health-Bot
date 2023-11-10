@@ -1,8 +1,22 @@
-import os
+from transformers import pipeline
 
 def moderate():
-    pass
+    question_answering = pipeline("question-answering")
+    context = ""
+    while True:
+        question = input("user: ")
+
+        result = question_answering(question=question, context=context)
+        print("Answer:", result['answer'])
 
 
 def dangerous():
-    pass
+    question_answering = pipeline("question-answering")
+    context = "" 
+    while True:
+        question = input("user: ")
+
+        result = question_answering(question=question, context=context)
+        print("Answer:", result['answer'])
+
+       

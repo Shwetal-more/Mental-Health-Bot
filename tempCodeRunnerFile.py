@@ -4,7 +4,7 @@ import EatingDisorder
 import Hyperactivity
 import personalityTest
 import awareness
-
+import schizophrenia
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -67,8 +67,15 @@ def smalltest():
      else:
        print("Please give answer in correct range")
      Question_number+=1 
-    
-    if (score >=30):
+
+     while Question_number==11:
+      if(score >=35):
+       print(color.CYAN+"You seems to be handling too much by yourself,\n so it seems we need to futher test you for your well-being "+color.END)
+      else:
+        print("You are totally fine \U0001F389 \U0001F389 \U0001F973 \n but you still need to look after yourself")
+      break
+     
+    if (score >=35):
       BigTest()
     else:
       EndPart()
@@ -76,9 +83,9 @@ def smalltest():
 #Big test is to identify specific Disorder
 def BigTest():
   
-  print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
-  print(color.BOLD + color.DARKCYAN+"Now we are going to have diffferent tests for different aspects in mental health" + color.END)
-  print("\nApppearing for anxiety test  (Please answer in (y/n)form ) ")
+  print(color.PURPLE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
+  print(color.BOLD + color.BLUE+"Now we are going to have diffferent tests for different aspects in mental health" + color.END)
+  print(color.CYAN+"\nApppearing for anxiety test  (Please answer in (y/n)form ) "+color.END)
   anxious=0
   while True:
       print(color.YELLOW+"--------------------------------------------------------------------------"+ color.END)
@@ -135,17 +142,17 @@ def BigTest():
         print(" Please enter the correct answer")
 
   if (anxious>=2 and anxious<=3):
-    print(color.CYAN+"**************************************"+color.END)
+    print(color.CYAN+"**************************************************************************"+color.END)
     print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully. ")
     result=anxiety.moderate()
     print(result)
   elif(anxious>=4 and anxious==5):
-    print(color.CYAN+"**************************************"+color.END)
+    print(color.CYAN+"*****************************************************************************"+color.END)
     result=anxiety.dangerous() 
     print(result)
   else:
-    print(color.CYAN+"**************************************"+color.END)
-    print("Ohh goood , You don't have such a symptoms regarding anxiety")  
+    print(color.CYAN+"*******************************************************************************"+color.END)
+    print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding anxiety"+color.END)  
 
   print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
   print("Apppearing for Depression test (Please answer in (y/n)form )")
@@ -206,17 +213,17 @@ def BigTest():
         print(" Please enter the correct answer")
 
   if (deprees>=2 and deprees<=3):
-    print(color.CYAN+"**************************************"+color.END)
+    print(color.CYAN+"***************************************************************************************"+color.END)
     print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
     result=depression.moderate()
     print(result)
   elif(deprees>=4 and deprees==5):
-    print(color.CYAN+"**************************************"+color.END)
+    print(color.CYAN+"*************************************************************************"+color.END)
     result=depression.dangerous() 
     print(result)
   else:
-    print(color.CYAN+"**************************************"+color.END)
-    print("Ohh goood , You don't have such a symptoms regarding Depression") 
+    print(color.CYAN+"************************************************************************************"+color.END)
+    print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding Depression"+color.END) 
 
   print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
   print("Apppearing for Eating Disorder test (Please answer in (y/n)form )")
@@ -276,17 +283,17 @@ def BigTest():
         print(" Please enter the correct answer")
 
   if ( Eating>=2 and Eating<=3):
-    print(color.CYAN+"**************************************"+color.END)
+    print(color.CYAN+"*******************************************************************************"+color.END)
     print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
     result=EatingDisorder.moderate()
     print(result)
   elif( Eating>=4 and  Eating==5):
-    print(color.CYAN+"**************************************"+color.END)
+    print(color.CYAN+"************************************************************************************"+color.END)
     result=EatingDisorder.dangerous() 
     print(result)
   else:
-    print(color.CYAN+"**************************************"+color.END)
-    print("Ohh goood , You don't have such a symptoms regarding Eating Dosorder")   
+    print(color.CYAN+"*****************************************************************************************"+color.END)
+    print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding Eating Dosorder"+color.END)   
     
   print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)  
   while True:
@@ -351,17 +358,17 @@ def BigTest():
           print(" Please enter the correct answer")
 
       if ( hyper>=2 and hyper<=3):
-        print(color.CYAN+"**************************************"+color.END)
+        print(color.CYAN+"******************************************************************************************************"+color.END)
         print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
         result=Hyperactivity.moderate()
         print(result)
       elif( hyper>=4 and  hyper==5):
-        print(color.CYAN+"**************************************"+color.END)
+        print(color.CYAN+"*******************************************************************************************************"+color.END)
         result=Hyperactivity.dangerous() 
         print(result)
       else:
-        print(color.CYAN+"**************************************"+color.END)
-        print("Ohh goood , You don't have such a symptoms regarding Hyperactivity Dosorder") 
+        print(color.CYAN+"******************************************************************************************************"+color.END)
+        print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding Hyperactivity Dosorder"+color.END) 
       
 
       print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
@@ -422,17 +429,88 @@ def BigTest():
           print(" Please enter the correct answer")
 
       if (  personality>=2 and  personality<=3):
-        print(color.CYAN+"**************************************"+color.END)
+        print(color.CYAN+"*********************************************************************************************"+color.END)
         print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
         result=personalityTest.moderate()
         print(result)
       elif(  personality>=4 and   personality==5):
-        print(color.CYAN+"**************************************"+color.END)
+        print(color.CYAN+"************************************************************************************************"+color.END)
         result=personalityTest.dangerous() 
         print(result)
       else:
-        print(color.CYAN+"**************************************"+color.END)
-        print("Ohh goood , You don't have such a symptoms regarding Hyperactivity Dosorder")  
+        print(color.CYAN+"**************************************************************************************"+color.END)
+        print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding personality Dosorder"+color.END)  
+      
+      print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
+      print(" Appearing for test 6 i.e Schizophrenia Disorder test  (Please answer in (y/n)form ) ") 
+      memory=0
+      while True:
+        print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
+        res1=str(input("1. Do you ever experience visual and auditory hallucination (the experience of seeing, hearing, feeling, or smelling something that does not exist) ?"))
+        if res1.lower() == 'y':
+           memory+=1
+           break
+        elif res1.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")  
+      while True:
+        print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
+        res2=str(input("2. Do you ofen start to cry or laugh without any reason "))
+        if res2.lower() == 'y':
+          memory+=1
+          break
+        elif res2.lower() == 'n':
+          print("Thank you!!")
+          break
+      while True:
+        print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
+        res3=str(input("3. do you have speech disorder(like stuttering, apraxia, and dysarthria) ?"))
+        if res3.lower() == 'y':
+           memory+=1
+           break
+        elif res3.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")    
+      while True:
+        print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
+        res4=str(input("4.are always in aggressive mood or in lack of motivation state?"))
+        if res4.lower() == 'y':
+           memory+=1
+           break
+        elif res4.lower() == 'n':
+          print("Thank you!!") 
+          break   
+        else:
+          print(" Please enter the correct answer")     
+      while True:
+        print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
+        res5=str(input("5. do you tend to have difficulty in remembering common words when speaking , \nTaking longer to complete familiar tasks or Misplacing items in inappropriate places and forgetting them ? "))
+        if res5.lower() == 'y':
+           memory+=1
+           break  
+        elif res5.lower() == 'n':
+          print("Thank you!!")
+          break
+        else:
+          print(" Please enter the correct answer")
+
+      if (  memory>=2 and  memory<=3):
+        print(color.CYAN+"*****************************************************************************************************"+color.END)
+        print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
+        result=schizophrenia.moderate()
+        print(result)
+      elif(  memory>=4 and   memory==5):
+        print(color.CYAN+"******************************************************************************************"+color.END)
+        result=schizophrenia.dangerous() 
+        print(result)
+      else:
+        print(color.CYAN+"*****************************************************************************************"+color.END)
+        print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding schizophrenia Dosorder"+color.END)  
+      
 
       break    
     
@@ -456,4 +534,3 @@ elif user.lower() == 'n':
      
 
    
-
