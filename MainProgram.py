@@ -76,8 +76,8 @@ def smalltest():
            print(color.CYAN+"You seems to be handling too much by yourself,\n so it seems we need to futher test you for your well-being "+color.END)
            BigTest()
         else:
-         print("You are totally fine \U0001F389 \U0001F389 \U0001F973 \n but you still need to look after yourself")
-         EndPart()
+          print("You are totally fine \U0001F389 \U0001F389 \U0001F973 \n but you still need to look after yourself")
+          EndPart()
         
     
         
