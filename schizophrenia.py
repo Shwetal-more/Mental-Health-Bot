@@ -1,3 +1,4 @@
+import os
 
 def moderate():
     pass
@@ -5,4 +6,3 @@ def moderate():
 
 def dangerous():
     pass
-
