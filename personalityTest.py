@@ -1,27 +1,11 @@
 from transformers import pipeline
 
 def moderate():
-    question_answering = pipeline("question-answering")
-    context = ""
+    print("Anxiety Overview: Definition:  Normal emotion of worry, fear, or unease.\n Becomes a concern when excessive, persistent, and disruptive (anxiety disorders).\n\n Symptoms:Physical: Rapid heartbeat, muscle tension, sweating.Cognitive: Excessive worrying, racing thoughts.\n Emotional: Restlessness, irritability, trouble sleeping.\n\nTreatment:\nTherapy: Cognitive-behavioral therapy (CBT), exposure therapy.\nMedications: Antidepressants, benzodiazepines (short-term), beta-blockers.\nLifestyle Changes: Exercise, healthy diet, adequate sleep, stress management.\n\nSelf-Help at Different Levels:\nMild Anxiety: Deep breathing, challenging irrational thoughts.\nModerate Anxiety: Journaling, physical activities.\nSevere Anxiety: Seek professional help, consider medication.\n\nWeekend Activities for Relief:Nature walks, creative outlets, socializing, relaxation techniques.\n\nDiet Recommendations:\nOmega-3 fatty acids (fish, flaxseeds, walnuts).\nWhole grains for steady energy.\nFruits and vegetables for antioxidants and vitamins.\nLimit caffeine and sugar intake.\n\nConclusion:\nIndividual responses vary, and consulting a healthcare professional for personalized advice is crucial. Implementing a holistic approach involving therapy, medication (if necessary), and lifestyle changes can contribute to managing anxiety effectively.")    
 
-    question = input("user: ")
-    while True:
-       result = question_answering(question=question, context=context)
-       print("Answer:", result['answer'])
-       break
-    if (question=='Exit' and question=='exit'):
-           return
+
 
 
 def dangerous():
-    question_answering = pipeline("question-answering")
-    context = ""
-
-    question = input("user: ")
-    while True:
-       result = question_answering(question=question, context=context)
-       print("Answer:", result['answer'])
-       break
-    if (question=='Exit' and question=='exit'):
-           return
+    print("Anxiety Overview: Definition:  Normal emotion of worry, fear, or unease.\n Becomes a concern when excessive, persistent, and disruptive (anxiety disorders).\n\n Symptoms:Physical: Rapid heartbeat, muscle tension, sweating.Cognitive: Excessive worrying, racing thoughts.\n Emotional: Restlessness, irritability, trouble sleeping.\n\nTreatment:\nTherapy: Cognitive-behavioral therapy (CBT), exposure therapy.\nMedications: Antidepressants, benzodiazepines (short-term), beta-blockers.\nLifestyle Changes: Exercise, healthy diet, adequate sleep, stress management.\n\nSelf-Help at Different Levels:\nMild Anxiety: Deep breathing, challenging irrational thoughts.\nModerate Anxiety: Journaling, physical activities.\nSevere Anxiety: Seek professional help, consider medication.\n\nWeekend Activities for Relief:Nature walks, creative outlets, socializing, relaxation techniques.\n\nDiet Recommendations:\nOmega-3 fatty acids (fish, flaxseeds, walnuts).\nWhole grains for steady energy.\nFruits and vegetables for antioxidants and vitamins.\nLimit caffeine and sugar intake.\n\nConclusion:\nIndividual responses vary, and consulting a healthcare professional for personalized advice is crucial. Implementing a holistic approach involving therapy, medication (if necessary), and lifestyle changes can contribute to managing anxiety effectively.")    
 
