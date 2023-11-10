@@ -71,14 +71,13 @@ def smalltest():
      while Question_number==11:
       if(score >=35):
        print(color.CYAN+"You seems to be handling too much by yourself,\n so it seems we need to futher test you for your well-being "+color.END)
+       BigTest()
       else:
         print("You are totally fine \U0001F389 \U0001F389 \U0001F973 \n but you still need to look after yourself")
+        EndPart()
       break
      
-    if (score >=35):
-      BigTest()
-    else:
-      EndPart()
+    
 
 #Big test is to identify specific Disorder
 def BigTest():

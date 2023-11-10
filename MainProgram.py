@@ -18,7 +18,7 @@ class color:
    END = '\033[0m'
 def smalltest():
   
-    questions = ("1. How have you been feeling lately ?",
+  questions = ("1. How have you been feeling lately ?",
              "2. On average, how many hours of sleep do you get per night \U0001F634 ?",
              "3. How have you been eating?",
              "4. Do you feel supported by your friends and peers in managing your mental health as a student \U0001F61E ?",
@@ -30,7 +30,7 @@ def smalltest():
              "10. How would you rate your overall stress levels in your daily life\U0001F64D?",
              "11. Do you feel comfortable expressing your thoughts and emotions to your Friends & Family?\U0001F46A")
 
-    options =(("A. \U0001F604", "B. \U0001F634", "C. \U0001F625", "D. \U0001F912", "E. \U0001F621"),
+  options =(("A. \U0001F604", "B. \U0001F634", "C. \U0001F625", "D. \U0001F912", "E. \U0001F621"),
             ("A.8-9hrs", "B.6-7hrs", "C.3-5hrs", "D.Sleepless night" ),
             ("A.Properly and on Time", "B.occasionally less", "C.frequently, Too Little", "D. frequently, too much", "E. Always Hungry"),
             ("A. Always", "B. most of time", "C. occasionally", "D. No,very rarely", "E. No, not at all"),
@@ -41,44 +41,46 @@ def smalltest():
             ("A. Yes, frequently", "B. Yes, occasionally", "C. No, rarely", "D. No, never"),
             ("A.Very low",  "B.Low Moderate", "C.High", "D. Very high"),
             ("A.Yes, always", "B.Most of the time", "C.Sometimes", "D. Rarely or never"))
-    Guesses = []
-    score = 0
-    Question_number=0
-    for question in questions:
-     print(color.PURPLE+"---------------------------------------------------------------------------"+color.END)
-     print(question)
-     for option in options[Question_number]:
+  
+  Guesses = []
+  score = 0
+  Question_number=0
+  
+  for question in questions:
+      print(color.PURPLE+"---------------------------------------------------------------------------"+color.END)
+      print(question)
+      for option in options[Question_number]:
         print(option)
     
-     
-     Guess = input("Enter the Answer (A,B,C,D,E):").upper()
-     Guesses.append(Guess)
+      
+      Guess = input("Enter the Answer (A,B,C,D,E):").upper()
+      Guesses.append(Guess)
     
-     if Guess == 'A':
+      if Guess == 'A':
          score=score+2 
-     elif Guess == 'B':
+      elif Guess == 'B':
         score=score+4 
-     elif Guess == 'C':
-       score=score+6 
-     elif Guess == 'D':
-       score=score+8
-     elif Guess == 'E':
-       score=score+10
-     else:
-       print("Please give answer in correct range")
-     Question_number+=1 
-
-     while Question_number==11:
-      if(score >=35):
-       print(color.CYAN+"You seems to be handling too much by yourself,\n so it seems we need to futher test you for your well-being "+color.END)
+      elif Guess == 'C':
+        score=score+6 
+      elif Guess == 'D':
+        score=score+8
+      elif Guess == 'E':
+        score=score+10
       else:
-        print("You are totally fine \U0001F389 \U0001F389 \U0001F973 \n but you still need to look after yourself")
-      break
-     
-    if (score >=35):
-      BigTest()
-    else:
-      EndPart()
+        print("Please give answer in correct range")
+      
+      Question_number+=1 
+
+      while Question_number==11:
+        if(score >=35):
+           print(color.CYAN+"You seems to be handling too much by yourself,\n so it seems we need to futher test you for your well-being "+color.END)
+           BigTest()
+        else:
+         print("You are totally fine \U0001F389 \U0001F389 \U0001F973 \n but you still need to look after yourself")
+         EndPart()
+        
+    
+        
 
 #Big test is to identify specific Disorder
 def BigTest():
@@ -97,7 +99,8 @@ def BigTest():
         print("Thank you!!")
         break
       else:
-        print(" Please enter the correct answer")  
+        print(" Please enter the correct answer") 
+        
   while True:
       print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
       res2=str(input("2.Do you often experience physical symptoms like racing heart, sweating,or trembling when you're anxious? Ans: "))
@@ -107,6 +110,9 @@ def BigTest():
       elif res2.lower() == 'n':
         print("Thank you!!")
         break
+      else:
+        print(" Please enter the correct answer")
+        
   while True:
       print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
       res3=str(input("3.Are you avoiding certain situations or activities because of your anxiety? Ans: "))
@@ -117,7 +123,8 @@ def BigTest():
         print("Thank you!!")
         break
       else:
-        print(" Please enter the correct answer")    
+        print(" Please enter the correct answer")   
+        
   while True:
       print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
       res4=str(input("4. Have you naticed a significant changes in your sleep patterns, such as difficulty falling asleep or staying asleep due to anxiety ? Ans: "))
@@ -128,7 +135,8 @@ def BigTest():
         print("Thank you!!")
         break    
       else:
-        print(" Please enter the correct answer")     
+        print(" Please enter the correct answer") 
+           
   while True:
       print(color.YELLOW+"--------------------------------------------------------------------------"+color.END)
       res5=str(input("5. Do you find it challenging to control your worry or anxious thoughts , even when you try to redirect your focus?  Ans: "))
@@ -140,19 +148,21 @@ def BigTest():
         break
       else:
         print(" Please enter the correct answer")
+        
 
-  if (anxious>=2 and anxious<=3):
+  if (anxious==2 or anxious==3):
     print(color.CYAN+"**************************************************************************"+color.END)
     print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully. ")
     result=anxiety.moderate()
     print(result)
-  elif(anxious>=4 and anxious==5):
+  elif (anxious==4 or anxious==5):
     print(color.CYAN+"*****************************************************************************"+color.END)
+    print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully. ")
     result=anxiety.dangerous() 
     print(result)
-  else:
+  else :
     print(color.CYAN+"*******************************************************************************"+color.END)
-    print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding anxiety"+color.END)  
+    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding anxiety"+color.END)  
 
   print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
   print("Apppearing for Depression test (Please answer in (y/n)form )")
@@ -212,18 +222,18 @@ def BigTest():
       else:
         print(" Please enter the correct answer")
 
-  if (deprees>=2 and deprees<=3):
+  if (deprees==2 or deprees==3):
     print(color.CYAN+"***************************************************************************************"+color.END)
     print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
     result=depression.moderate()
     print(result)
-  elif(deprees>=4 and deprees==5):
+  elif(deprees==4 or deprees==5):
     print(color.CYAN+"*************************************************************************"+color.END)
     result=depression.dangerous() 
     print(result)
   else:
     print(color.CYAN+"************************************************************************************"+color.END)
-    print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding Depression"+color.END) 
+    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding Depression"+color.END) 
 
   print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
   print("Apppearing for Eating Disorder test (Please answer in (y/n)form )")
@@ -282,18 +292,18 @@ def BigTest():
       else:
         print(" Please enter the correct answer")
 
-  if ( Eating>=2 and Eating<=3):
+  if ( Eating==2 or Eating==3):
     print(color.CYAN+"*******************************************************************************"+color.END)
     print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
     result=EatingDisorder.moderate()
     print(result)
-  elif( Eating>=4 and  Eating==5):
+  elif( Eating==4 or Eating==5):
     print(color.CYAN+"************************************************************************************"+color.END)
     result=EatingDisorder.dangerous() 
     print(result)
   else:
     print(color.CYAN+"*****************************************************************************************"+color.END)
-    print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding Eating Dosorder"+color.END)   
+    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding Eating Dosorder"+color.END)   
     
   print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)  
   while True:
@@ -357,18 +367,18 @@ def BigTest():
         else:
           print(" Please enter the correct answer")
 
-      if ( hyper>=2 and hyper<=3):
+      if ( hyper==2 or hyper==3):
         print(color.CYAN+"******************************************************************************************************"+color.END)
         print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
         result=Hyperactivity.moderate()
         print(result)
-      elif( hyper>=4 and  hyper==5):
+      elif( hyper==4 or  hyper==5):
         print(color.CYAN+"*******************************************************************************************************"+color.END)
         result=Hyperactivity.dangerous() 
         print(result)
       else:
         print(color.CYAN+"******************************************************************************************************"+color.END)
-        print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding Hyperactivity Dosorder"+color.END) 
+        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding Hyperactivity Dosorder"+color.END) 
       
 
       print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
@@ -428,18 +438,18 @@ def BigTest():
         else:
           print(" Please enter the correct answer")
 
-      if (  personality>=2 and  personality<=3):
+      if (  personality==2 or personality==3):
         print(color.CYAN+"*********************************************************************************************"+color.END)
         print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
         result=personalityTest.moderate()
         print(result)
-      elif(  personality>=4 and   personality==5):
+      elif(  personality==4 or  personality==5):
         print(color.CYAN+"************************************************************************************************"+color.END)
         result=personalityTest.dangerous() 
         print(result)
       else:
         print(color.CYAN+"**************************************************************************************"+color.END)
-        print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding personality Dosorder"+color.END)  
+        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding personality Dosorder"+color.END)  
       
       print(color.BLUE+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
       print(" Appearing for test 6 i.e Schizophrenia Disorder test  (Please answer in (y/n)form ) ") 
@@ -498,23 +508,22 @@ def BigTest():
         else:
           print(" Please enter the correct answer")
 
-      if (  memory>=2 and  memory<=3):
+      if (  memory==2 or  memory==3):
         print(color.CYAN+"*****************************************************************************************************"+color.END)
         print(" We have seen some symptoms in you so are here to give some relevant information to you Please read that carefully ")
         result=schizophrenia.moderate()
         print(result)
-      elif(  memory>=4 and   memory==5):
+      elif(  memory==4 or   memory==5):
         print(color.CYAN+"******************************************************************************************"+color.END)
         result=schizophrenia.dangerous() 
         print(result)
       else:
         print(color.CYAN+"*****************************************************************************************"+color.END)
-        print(color.BOLD+"Ohh goood \U0001F60C \U0001F973, You don't have such a symptoms regarding schizophrenia Dosorder"+color.END)  
+        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding schizophrenia Dosorder"+color.END)  
       
 
-      break    
-    
     elif test.lower()== 'n':
+       result = awareness.movie()
        break
 
     
