@@ -167,7 +167,7 @@ def BigTest():
     print(result)
   else :
     print(color.CYAN+"*******************************************************************************"+color.END)
-    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding anxiety"+color.END)  
+    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E\U0001200D \U0001F973, You don't have such a symptoms regarding anxiety"+color.END)  
   
 
   print(color.AQUA+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
@@ -246,7 +246,7 @@ def BigTest():
     print(result)
   else:
     print(color.CYAN+"************************************************************************************"+color.END)
-    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding Depression"+color.END) 
+    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E\U0001200D \U0001F973, You don't have such a symptoms regarding Depression"+color.END) 
   
 
   print(color.AQUA+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
@@ -324,7 +324,7 @@ def BigTest():
     print(result)
   else:
     print(color.CYAN+"*****************************************************************************************"+color.END)
-    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding Eating Dosorder"+color.END)   
+    print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E\U0001200D \U0001F973, You don't have such a symptoms regarding Eating Dosorder"+color.END)   
 
 
   print(color.AQUA+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)  
@@ -408,7 +408,7 @@ def BigTest():
         print(result)
       else:
         print(color.CYAN+"******************************************************************************************************"+color.END)
-        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding Hyperactivity Dosorder"+color.END) 
+        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E\U0001200D \U0001F973, You don't have such a symptoms regarding Hyperactivity Dosorder"+color.END) 
       
 
       print(color.AQUA+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
@@ -487,7 +487,7 @@ def BigTest():
         print(result)
       else:
         print(color.CYAN+"**************************************************************************************"+color.END)
-        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding personality Dosorder"+color.END)  
+        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E\U0001200D \U0001F973, You don't have such a symptoms regarding personality Dosorder"+color.END)  
       
       print(color.AQUA+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -"+color.END)
       print(" Appearing for test 6 i.e Schizophrenia Disorder test  (Please answer in (y/n)form ) ") 
@@ -565,7 +565,7 @@ def BigTest():
         print(result)
       else:
         print(color.CYAN+"*****************************************************************************************"+color.END)
-        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E \U0001F973, You don't have such a symptoms regarding schizophrenia Dosorder"+color.END)  
+        print(color.BOLD+"Ohh goood \U0001F601 \U0001F62E\U0001200D \U0001F973, You don't have such a symptoms regarding schizophrenia Dosorder"+color.END)  
       EndPart()
     elif test.lower()== 'n':
        EndPart()
@@ -580,7 +580,7 @@ def EndPart():
 
 
 #Starting of the main code
-print(color.GREENYELLOW+"***********Welcome to our Student friendly quik and easy Mental Health testing game**************"+color.END)
+print(color.GREENYELLOW+"****************************Welcome to our Student friendly quik and easy Mental Health testing game*******************************"+color.END)
 user=str(input(color.BOLD+"Are you interested in giving the small test(y/Y) or not(N/n) ? "+color.END))
 if user.lower() == 'y':
     smalltest()
