@@ -42,6 +42,7 @@ def moderate():
 
 
 def dangerous():
+    
     question_answering = pipeline("question-answering")
     context = """ An eating disorder is a serious, complex, mental health issue that one's affects emotional and physical health. 
               Types in Eating Disorder are Anorexia nervosa: People with anorexia nervosa greatly restrict food and calories sometimes to the point of self-starvation, 2.Binge eating disorder (BED): People who have a binge eating disorder experience compulsory eating behaviors, 3.Bulimia nervosa: People diagnosed with bulimia nervosa binge or eat, or perceive they ate, large amounts of food over a short time.

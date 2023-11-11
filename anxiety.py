@@ -41,7 +41,6 @@ def modarate():
        
 def dangerous():
   
-   
     question_answering = pipeline("question-answering")
     context = """ Anxiety is your body's natural response to stress. 
      Severe anxiety is People with severe anxiety usually experience more distress and less ability to function. 

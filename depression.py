@@ -14,6 +14,7 @@ class color:
 
 
 def moderate():
+    
     question_answering = pipeline("question-answering")
     context = """ Depression appears as a persistent sad mood, reduced interest in your favorite activities, and having symptoms that negatively interfere with your daily functioning. 
      Causes of depression are Childhood experiences, Life events, Styles of thinking, Other mental health problems, Physical health problems, Family history, Medication, Recreational drugs and alcohol.
@@ -36,6 +37,7 @@ def moderate():
 
 
 def dangerous():
+    
     question_answering = pipeline("question-answering")
     context = """ Depression appears as a persistent sad mood, reduced interest in your favorite activities, and having symptoms that negatively interfere with your daily functioning. 
     Symptoms of depression of feeling sad or irritable more often than not,seem tired,lack energy,give up easily, put little effort into schoolwork, have trouble concentrating in class, fail to turn in work, get lower grades, seem not to enjoy things, withdraw from friends or activities, miss school or collage, or be frequently late. 
