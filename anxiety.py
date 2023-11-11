@@ -11,7 +11,7 @@ class color:
    BOLD = '\033[1m'
    UNDERLINE = '\033[4m'
    END = '\033[0m'
-def modarate():
+def moderate():
      
     question_answering = pipeline("question-answering")
     context = """Anxiety is your body's natural response to stress. 
